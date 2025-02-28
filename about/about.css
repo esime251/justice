@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    display: flex; /* Makes list horizontal */
+    gap: 20px; /* Adds spacing between items */
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 18px;
+}
+
+ul li a:hover {
+    background-color: white;
+    color: rgb(0, 45, 117);
+}
+
+
+.header {
+    display: flex;
+    align-items: center; /* Aligns logo and text to the same level */
+    justify-content: flex-start; /* Keeps everything to the left */
+    padding: 10px 20px; /* Adjust spacing */
+}
+
+.logo img {
+    max-width: 80px; 
+    height: auto;
+    margin-right: 500px;
+    position: relative;
+}
+
+.header-text {
+    font-size: 1.5rem; /* Adjust as needed */
+    color: #333;
+    margin-left: 100px; /* Space between logo and text */
+    position: absolute;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 50px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text {
+    width: 40%;
+    font-size: 2rem;
+    color: #333;
+}
+
+.image {
+    width: 50%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+
+}
+
